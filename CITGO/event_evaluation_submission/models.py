@@ -7,4 +7,4 @@ class FeedBack(models.Model):
     feedback = models.CharField(max_length=500, null=False)
     studentID = models.ManyToManyRel()
     teacherID = models.ManyToManyRel(Teacher)
-    eventID = models.ForeignKey(Event)
+    eventID = models.ForeignKey(Event, on_delete= models.CASCADE)
