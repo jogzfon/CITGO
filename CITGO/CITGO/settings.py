@@ -37,10 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'EventAttendanceTracker',
-    'student_registration',
-    'event_evaluation_submission',
-    'teacher_assignment',
 ]
 
 MIDDLEWARE = [

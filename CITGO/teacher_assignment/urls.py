@@ -22,4 +22,3 @@ urlpatterns = [
     path('teachers/', views.teacher_list, name='teacher_list'),
 ]
 
-

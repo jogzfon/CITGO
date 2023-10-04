@@ -3,17 +3,21 @@ from django.db import models
 
 # Create your models here.
 class Teacher(models.Model):
+    teacherID = models.IntegerField(null = False, primary_key = True)
     name = models.CharField(max_length=100)
-    subjects_taught = models.ManyToManyField('Event', related_name='teachers_assigned', blank=True)
+
 
     def __str__(self):
         return self.name
 
 
 class Event(models.Model):
-    title = models.CharField(max_length=200)
-    date = models.DateField()
-    description = models.TextField()
+    eventID= models.IntegerField(null=False, primary_key = True)
+    status= models.BooleanField(null = True)
+    eventName = models.CharField(max_length=200)
+    eventDate= models.DateField(null=False)
+    registrationDate = models.DateField(null = False)
+    slots= models.IntegerField(null= False)
 
     def __str__(self):
         return self.title
