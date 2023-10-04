@@ -1,6 +1,5 @@
 from django.db import models
-# from CITGO.teacher_assignment.models import Teacher, Event
-
+from CITGO.teacher_assignment.models import Teacher, Event
 
 # Create your models here.
 class FeedBack(models.Model):
