@@ -5,6 +5,6 @@ from CITGO.teacher_assignment.models import Teacher, Event
 class FeedBack(models.Model):
     feedbackID = models.IntegerField(null=False, primary_key=True)
     feedback = models.CharField(max_length=500, null=False)
-    studentID = models.ManyToManyRel()
-    teacherID = models.ManyToManyRel(Teacher)
+    # studentID = models.ManyToManyRel('Student',on_delete=models.CASCADE)
+    # teacherID = models.ManyToManyRel('Teacher', on_delete=models.CASCADE)
     eventID = models.ForeignKey(Event, on_delete= models.CASCADE)
